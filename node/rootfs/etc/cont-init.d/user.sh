@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Node-RED
+# MindoMQTT
 # Executes user customizations on startup
 # ==============================================================================
 
@@ -19,9 +19,9 @@ fi
 
 # Install user configured/requested packages
 if bashio::config.has_value 'npm_packages'; then
-    cd /opt || bashio::exit.nok "Could not change directory to Node-RED"
+    cd /opt || bashio::exit.nok "Could not change directory to Mindobridge"
 
-    bashio::log.info "Starting installation of custom NPM/Node-RED packages..."
+    bashio::log.info "Starting installation of custom NPM/Mindobridge packages..."
     for package in $(bashio::config 'npm_packages'); do
         npmlist+=("$package")
     done
