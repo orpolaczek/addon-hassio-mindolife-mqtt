@@ -1,6 +1,6 @@
 {
-  "private": true,
-  "name": "addon-hassio-mindolife-mqtt",
+  "private": false,
+  "name": "mindobridge",
   "description": "Bi-directional connector between MQTT and the Mindolife API",
   "homepage": "https://addons.community",
   "repository": "https://github.com/orpolaczek/addon-hassio-mindolife-mqtt",
