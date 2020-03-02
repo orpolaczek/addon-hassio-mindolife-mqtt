@@ -5,13 +5,13 @@
   "homepage": "https://addons.community",
   "repository": "https://github.com/orpolaczek/addon-hassio-mindolife-mqtt",
   "license": "MIT",
-  "main": "node_modules/mindobridge/server.js",
+  "main": "node_modules/mindolife-mqtt/lib/server.js",
   "scripts": {
-    "start": "node $NODE_OPTIONS node_modules/mindobridge/server.js",
+    "start": "node $NODE_OPTIONS node_modules/mindolife-mqtt/lib/server.js"
   },
   "dependencies": {
-    "mindobridge": "git+https://github.com/orpolaczek/mindolife-mqtt.git",
     "express": "4.15.3",
+    "mindolife-mqtt": "git+https://github.com/orpolaczek/mindolife-mqtt.git",
     "mqtt": "^3.0.0",
     "request": "2.81.0",
     "uuid": "^7.0.1"
