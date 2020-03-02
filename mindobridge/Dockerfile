@@ -25,8 +25,6 @@ RUN \
         nodejs=12.15.0-r1 \
         npm=12.15.0-r1 \
     \
-    && paxctl -cm "$(command -v node)" \
-    \
     && npm config set unsafe-perm true \
     \
     && npm install \
