@@ -6,7 +6,7 @@
 declare port
 
 # Ensure the credential secret value is set
-if bashio::config.is_empty 'mindolife'; then
+if bashio::config.is_empty 'mindobridge'; then
     bashio::log.fatal
     bashio::log.fatal 'Configuration of this add-on is incomplete.'
     bashio::log.fatal
