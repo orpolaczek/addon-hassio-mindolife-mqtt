@@ -1,0 +1,59 @@
+{
+  "name": "Mindolife MQTT",
+  "version": "dev",
+  "slug": "mindobridge",
+  "description": "",
+  "url": "https://github.com/orpolaczek/addon-hassio-mindolife-mqtt",
+  "panel_icon": "mdi:sitemap",
+  "startup": "application",
+  "homeassistant": "0.92.0b2",
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "ports": {
+    "3000/tcp": 13000
+  },
+  "ports_description": {
+    "3000/tcp": "Get devices cache"
+  },
+  "boot": "auto",
+  "hassio_api": false,
+  "host_network": true,
+  "auto_uart": true,
+  "privileged": ["SYS_RAWIO"],
+  "devices": ["/dev/mem:/dev/mem:rwm"],
+  "apparmor": false,
+  "map": ["config:rw", "share:rw", "ssl"],
+  "options": {
+    "pollingInterval": 5000,
+    "mindolife": {
+      "developerKey": "",
+      "sessionKey": "",
+      "gatewayId": ""
+    },
+    "mqtt": {
+      "host": "127.0.0.1",
+      "port": 1883,
+      "username": "",
+      "password": "",
+      "topicPrefix": "homeassistant"
+    },
+    "log": true
+  },
+  "schema": {
+    "pollingInterval": "int",
+    "credential_secret": "password",
+    "dark_mode": "bool",
+    "mindolife": {
+      "developerKey": "password",
+      "sessionKey": "password",
+      "gatewayId": "str"
+    },
+    "mqtt": {
+      "host": "str",
+      "port": "int",
+      "username": "str",
+      "password": "password",
+      "topicPrefix": "str"
+    },
+    "log": "bool",
+  }
+}

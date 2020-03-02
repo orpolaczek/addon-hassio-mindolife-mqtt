@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Mindolife MQTT
+# Starts Mindolife MQTT
+# ==============================================================================
+export NODE_PATH=/opt/node_modules:/data/node_modules
+declare -a options
+cp -f /etc/mindobridge/config.js /data/node_modules/mindobridge/
+options+=(--settings "/etc/mindobridge/config.js")
+
+cd /opt || bashio::exit.nok "Could not change directory to MindolifeMQTT"
+
+bashio::log.info "Starting MindolifeMQTT..."
+
+exec npm start -- "${options[@]}"
