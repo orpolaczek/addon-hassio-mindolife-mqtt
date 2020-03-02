@@ -6,9 +6,9 @@
   "homepage": "https://addons.community",
   "repository": "https://github.com/orpolaczek/addon-hassio-mindolife-mqtt",
   "license": "MIT",
-  "main": "node_modules/mindolife-mqtt/lib/server.js",
+  "main": "/opt/node_modules/mindolife-mqtt/lib/server.js",
   "scripts": {
-    "start": "node $NODE_OPTIONS node_modules/mindolife-mqtt/lib/server.js"
+    "start": "node $NODE_OPTIONS /opt/node_modules/mindolife-mqtt/lib/server.js"
   },
   "dependencies": {
     "express": "4.15.3",
