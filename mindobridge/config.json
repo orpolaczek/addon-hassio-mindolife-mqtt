@@ -54,6 +54,6 @@
       "password": "password",
       "topicPrefix": "str"
     },
-    "log": "bool",
+    "log": "bool"
   }
 }
