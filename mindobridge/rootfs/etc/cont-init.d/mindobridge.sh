@@ -17,6 +17,6 @@ fi
 
 # Ensure configuration exists
 if ! bashio::fs.directory_exists '/config/mindobridge/'; then
-    mkdir -p /config/node-red/nodes \
+    mkdir -p /config/mindobridge/nodes \
         || bashio::exit.nok "Failed to create Mindobridge configuration directory"
 fi
