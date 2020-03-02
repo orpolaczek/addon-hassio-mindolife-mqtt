@@ -40,8 +40,6 @@
   },
   "schema": {
     "pollingInterval": "int",
-    "credential_secret": "password",
-    "dark_mode": "bool",
     "mindolife": {
       "developerKey": "password",
       "sessionKey": "password",
