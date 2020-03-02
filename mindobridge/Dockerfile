@@ -19,13 +19,11 @@ RUN \
         libc-dev=0.7.2-r0 \
         linux-headers=4.19.36-r0 \
         make=4.2.1-r2 \
-        py2-pip=18.1-r0 \
-        python2-dev=2.7.16-r3 \
     \
     && apk add --no-cache \
         git=2.24.1-r0 \
-        nodejs=12.15.0-r1 \
-        npm=12.15.0-r1 \
+        nodejs=13.8.0 \
+        npm=6.13.6 \
     \
     && paxctl -cm "$(command -v node)" \
     \
