@@ -22,8 +22,8 @@ RUN \
     \
     && apk add --no-cache \
         git=2.24.1-r0 \
-        nodejs=13.8.0 \
-        npm=6.13.6 \
+        nodejs=12.15.0-r1 \
+        npm=12.15.0-r1 \
     \
     && paxctl -cm "$(command -v node)" \
     \
