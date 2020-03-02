@@ -5,7 +5,7 @@
 # ==============================================================================
 export NODE_PATH=/opt/node_modules:/data/node_modules
 declare -a options
-cp -f /etc/mindolife-mqtt/config.js /data/node_modules/mindolife-mqtt/
+cp -f /etc/mindobridge/config.js /data/node_modules/mindolife-mqtt/
 options+=(--settings "/etc/mindobridge/config.js")
 
 cd /opt || bashio::exit.nok "Could not change directory to MindolifeMQTT"
