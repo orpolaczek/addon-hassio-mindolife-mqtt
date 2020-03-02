@@ -6,6 +6,7 @@
   "url": "https://github.com/orpolaczek/addon-hassio-mindolife-mqtt",
   "panel_icon": "mdi:sitemap",
   "startup": "application",
+  "boot": "auto",
   "homeassistant": "0.92.0b2",
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
   "ports": {
@@ -16,12 +17,13 @@
   },
   "boot": "auto",
   "hassio_api": false,
+  "hassio_role": "default",
   "host_network": true,
   "auto_uart": true,
   "privileged": ["SYS_RAWIO"],
   "devices": ["/dev/mem:/dev/mem:rwm"],
   "apparmor": false,
-  "map": ["config:rw", "share:rw", "ssl"],
+  "map": ["config:rw", "share:rw", "ssl:rw"],
   "options": {
     "pollingInterval": 5000,
     "mindolife": {
