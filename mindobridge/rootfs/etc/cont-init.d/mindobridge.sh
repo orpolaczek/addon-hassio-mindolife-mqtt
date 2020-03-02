@@ -5,16 +5,6 @@
 # ==============================================================================
 declare port
 
-# Ensure the credential secret value is set
-if bashio::config.is_empty 'mindobridge'; then
-    bashio::log.fatal
-    bashio::log.fatal 'Configuration of this add-on is incomplete.'
-    bashio::log.fatal
-    bashio::log.fatal 'Please be sure to set the "mindolife" option.'
-    bashio::log.fatal
-    bashio::exit.nok
-fi
-
 # Ensure configuration exists
 if ! bashio::fs.directory_exists '/config/mindobridge/'; then
     mkdir -p /config/mindobridge/nodes \
