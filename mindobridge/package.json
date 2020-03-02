@@ -1,5 +1,6 @@
 {
   "private": false,
+  "version": "0.0.3",
   "name": "mindobridge",
   "description": "Bi-directional connector between MQTT and the Mindolife API",
   "homepage": "https://addons.community",
