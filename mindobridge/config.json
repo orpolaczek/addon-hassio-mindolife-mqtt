@@ -25,7 +25,7 @@
   "apparmor": false,
   "map": ["config:rw", "share:rw", "ssl:rw"],
   "options": {
-    "pollingInterval": 5000,
+    "pollingIntervalMillis": 5000,
     "mindolife": {
       "developerKey": "",
       "sessionKey": "",
@@ -41,7 +41,7 @@
     "log": true
   },
   "schema": {
-    "pollingInterval": "int",
+    "pollingIntervalMillis": "int",
     "mindolife": {
       "developerKey": "password",
       "sessionKey": "password",
