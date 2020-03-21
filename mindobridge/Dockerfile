@@ -15,11 +15,11 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apk add --no-cache nodejs-current yarn && \
     yarn global add npm && \
     yarn cache clean && \
-    apk del yarn && \
-    apk add --no-cache \
-        git=2.24.1-r0 \
-    \
-    && npm config set unsafe-perm true \
+    apk del yarn
+
+RUN apk add --no-cache git
+
+RUN npm config set unsafe-perm true \
     \
     && npm install \
         --no-audit \
@@ -28,10 +28,9 @@ RUN apk add --no-cache nodejs-current yarn && \
         --only=production \
         --unsafe-perm \
     \
-    && npm cache clear --force \
-    \
-    && apk del --no-cache --purge .build-dependencies \
-    && rm -fr \
+    && npm cache clear --force 
+
+RUN rm -fr \
         /tmp/* 
 
 # Copy root filesystem
