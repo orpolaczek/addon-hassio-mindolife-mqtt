@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.0.2
+ARG BUILD_FROM=hassioaddons/base:7.0.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -12,18 +12,12 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-RUN \
-    apk add --no-cache --virtual .build-dependencies \
-        g++=9.2.0-r3 \
-        gcc=9.2.0-r3 \
-        libc-dev=0.7.2-r0 \
-        linux-headers=4.19.36-r0 \
-        make=4.2.1-r2 \
-    \
-    && apk add --no-cache \
+RUN apk add --no-cache nodejs-current yarn && \
+    yarn global add npm && \
+    yarn cache clean && \
+    apk del yarn && \
+    apk add --no-cache \
         git=2.24.1-r0 \
-        nodejs=12.15.0-r1 \
-        npm=12.15.0-r1 \
     \
     && npm config set unsafe-perm true \
     \
