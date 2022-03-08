@@ -12,7 +12,12 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-RUN apk add --no-cache nodejs-current yarn && \
+RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip
+RUN set -eux \
+    & apk add \
+        --no-cache \
+        nodejs \
+        yarn && \
     yarn global add npm && \
     yarn cache clean && \
     apk del yarn
