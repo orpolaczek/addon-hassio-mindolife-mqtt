@@ -11,7 +11,7 @@
     "start": "node $NODE_OPTIONS /opt/node_modules/mindolife-mqtt/lib/server.js"
   },
   "dependencies": {
-    "express": "4.15.3",
+    "express": "4.19.2",
     "mindolife-mqtt": "git+https://github.com/orpolaczek/mindolife-mqtt.git",
     "mqtt": "^3.0.0",
     "request": "2.81.0",
